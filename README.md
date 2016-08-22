@@ -1,6 +1,6 @@
 # howtoscience.net
 
-[howtoscience.net](http://www.howtoscience.net/) is a free resource for science students looking to improve their skills in scientific communication. It guides the reader through the process of how to approach writing scientific papers using the three-act narrative structure. Star Wars (1977) is used as an example throughout.
+[howtoscience.net](http://www.howtoscience.net/) is a free resource for science students looking to improve their skills in scientific communication. It guides the reader through the process of how to approach writing scientific papers using the three-act narrative structure. _Star Wars_ (1977) is used as an example throughout.
 
 ## What's here
 
