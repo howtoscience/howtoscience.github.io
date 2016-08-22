@@ -1,0 +1,627 @@
+/*****************************
+Main.css for howtoscience.net
+By David Allen, except where noted.
+*****************************/
+
+
+/*****************
+GENERAL
+*****************/
+
+/*Reset default browser CSS. Taken from oxfordstrat.com, in turn based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+html {
+	height: 100%;
+	margin-bottom: 1px;
+	overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll!important;
+}
+/*D.A.: End 'borrowed' browser reset code*/
+
+/*Remove link underlines*/
+a:link {
+  text-decoration: none;
+}
+
+/*Allow dynamic image resizing*/
+img {
+  max-width: 100%;
+}
+
+
+/*****************
+COLOURS
+*****************/
+
+/* Background is cream #fffffc. Foreground highlights are dark blue #122256
+In-text links are slightly lighter at #123456 */
+
+a:link, a:visited {
+  color: #123456;
+}
+
+body {
+	background: #fffffc;
+}
+
+#masthead {
+	background: #122256;
+}
+
+#menuDrop li {
+	border-color: #fffffc!important;
+	background-color: #122256;
+}
+
+#menuDrop li a {
+	color: #fffffc;
+}
+
+h1, h2, h3 {
+  color: #fffffc;
+}
+
+h3 {
+	background: #122256;
+}
+
+h4 {
+  color: #122256;
+}
+
+.figure {
+	border-color: #122256;
+}
+
+footer {
+	Background: #122256;
+	color: #fffffc;
+}
+
+#menuActual a:hover,
+#menuActual a:active,
+#pageTurnNav a, .fa {
+  color: #fffffc;
+  background-color: #122256;
+	box-shadow: 2px 2px 5px #000;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#dropDown li:active {
+	background-color: #fffffc;
+	border-color: #122256;
+}
+
+#dropDown li a:active {
+	color: #122256!important;
+	border-style: solid!important;
+	border: 2px;
+	border-radius: 15px;
+	border-color: #122256;
+	text-shadow: none;
+}
+
+#home:active {
+	background-color: #fffffc;
+	box-shadow: 0px 0px 0px 2px #122256 inset;
+}
+
+.fa-home:active {
+	color: #122256!important;
+	background: #fffffc;
+}
+
+.selected a {
+	color: #122256!important;
+}
+
+#menuDrop li.selected {
+	color: #122256!important;
+	background-color: #fffffc;
+	box-shadow: 0px 0px 0px 2px #122256 inset;
+	text-shadow: none;
+}
+
+
+
+/*****************
+FONTS
+*****************/
+
+/*Font location (Googleapis) CSS rules are linked in the HTML header*/
+
+/*Heading font*/
+h1, h2, h3, h4 {
+	font-family: "Ubuntu", sans-serif;
+}
+
+/*Nav font*/
+#menu, #pageTurnNav {
+	font-family: "Ubuntu", sans-serif;
+}
+
+/*Main content font*/
+#content {
+	font-family: "Vollkorn", serif;
+}
+
+/*Figure legend font*/
+.figure p {
+	font-family: "Ubuntu", sans-serif;
+}
+
+
+footer {
+	font-family: "Ubuntu", sans-serif;
+}
+
+/*Font awesome rules*/
+.fa {
+	box-shadow: none; /*prevents ugly inherited box shadows from ruining the icon chars*/
+	font-weight: normal;
+}
+
+/*****************
+MASTHEAD
+*****************/
+
+#jsDisabled {
+	background-color: yellow;
+	padding: 0.25em 0;
+	font-size: 0.85em;
+}
+
+#mashead a {
+	padding: 0 2.5%;
+}
+
+#masthead {
+  text-align: center;
+  margin: 0;
+	/*box-shadow: 0px 2px 5px #000;*/
+}
+
+#masthead h1 {
+	font-size: 1.5em;
+}
+
+#masthead h2 {
+	display: none;
+}
+
+.main-heading {
+	padding: 0.3rem 0 0;
+}
+
+/*****************
+NAVIGATION
+*****************/
+#menu {
+  text-align: center;
+	margin: 0 0 0.5em;
+}
+
+/*menuActual is a row menu displayed at higher screen resolutions*/
+#menuActual {
+	display: none;
+}
+
+/*menuDrop is a JavaScript-powered drop-down menu displayed at phone resolutions*/
+#menuDrop {
+	padding: 0 2.5%;
+	padding-bottom: 0.25rem;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	background-color: #122256;
+	box-shadow: 0 4px 3px -3px #000;
+}
+
+#menuDrop li {
+	border-radius: 15px;
+	border: 2px;
+	margin: 0.5rem 0.25rem 0.5rem 0;
+	border-style: solid;
+	text-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 5px #000;
+}
+
+#menuDrop li a {
+	display: block;
+	padding: 0.5rem;
+	white-space: nowrap;
+	border-radius: 15px;
+}
+
+#mainNav {
+	padding: 0.3rem 0 0;
+	flex-grow: 3;
+	text-align: left;
+}
+
+#home {
+	font-size: 1.5em;
+	text-align: center;
+	align-self: flex-start;
+}
+
+/*dropDown is the <ul> that contains the nav list elements that appears when the 'Navigation' link is activated*/
+#dropDown {
+	margin: 0.5rem 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+#dropDown li {
+	margin: 0.25em 0.25em;
+}
+
+#dropDown li a {
+	padding: 0.5em;
+}
+
+/* #pageTurnNav is the element containing the 'Next ->' and '<- Previous'
+page links allowing easy user navigation when at the bottom of a page*/
+#pageTurnNav {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 2.5%;
+}
+
+#pageTurnNav ul {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+#pageTurnNav ul li {
+	padding: 0.5em 0;
+}
+
+#pageTurnNav ul li a {
+	text-decoration: none;
+	border-radius: 15px;
+	padding: 0.5em;
+	box-shadow: 2px 2px 5px #000;
+	white-space: nowrap; /*Fixes issue with firefox mobile displaying link on two lines*/
+}
+
+/*Ensures that the 'Next >' link is on the right hand side of its
+parent flex container, #pageTurnNav ul. The '< Previous' link is
+always rendered on the left by default*/
+.next {
+	margin-left: auto;
+}
+
+
+
+/*****************
+CONTENT
+*****************/
+
+/*Main content size/position*/
+#content {
+  text-align: justify;
+	line-height: 1.25;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+
+/*Emphasise links within content text body, so they don't look like the nav section*/
+#content a:link, a:visited {
+  text-decoration: underline;
+}
+
+#content .fa {
+	color: inherit;
+	background-color: inherit;
+	text-shadow: inherit;
+}
+
+/*Heading and content relative positioning*/
+h1, h2{
+  padding: 0.25rem;
+	text-shadow: 2px 2px 2px #000;
+}
+
+h3 {
+	font-size: 1em;
+	padding: 0.5rem;
+	border-radius: 15px;
+	text-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 5px #000;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+p {
+  padding: 0.5em 0;
+}
+
+body {
+	font-size: 1.125em;
+}
+
+
+/*****************
+FIGURES & LEGENDS
+*****************/
+
+.figure {
+	border: 1px solid;
+	border-radius: 15px;
+	padding: 0.5em;
+	margin: 0.5em 0;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.figure p {
+	padding: 0;
+}
+
+.legend {
+	margin-top: 1em;
+	font-size: 0.8em;
+}
+
+.figure img {
+	display: block;
+	margin: 0 auto;
+}
+
+.starWars {
+	border-radius: 15px;
+}
+
+
+/*****************
+FOOTER
+*****************/
+
+footer {
+  text-align: center;
+  margin: 1rem auto 0;
+  clear: both;
+	box-shadow: 0px -2px 5px #000;
+	text-shadow: 2px 2px 2px #000;
+}
+
+
+
+/*****************
+Overlay stuff: JS-powered full-size image link styling
+*****************/
+/*Generates a greyed-out page overlay effect to blur the
+background page. An image of interest is then rendered on top*/
+#overlay {
+  background: rgba(0,0,0,.6);
+	width: 100%;
+	height: 100%;
+	/*position fixed makes the div cover the whole page*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	display: none;
+	text-align: center;
+}
+
+#figureContainer {
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	padding: 2%;
+}
+
+#figureContainer img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*#overlay p {
+	margin: 0 auto;
+	color: #fffffc;
+	font-family: "Ubuntu", sans-serif;
+	text-align: justify;
+	padding: 0 10%;
+	text-shadow: 1px 1px 1px #000;
+	line-height: 1.5;
+}*/
+
+
+
+/*****************
+Responsive CSS
+*****************/
+
+/*Small tablet resolutions*/
+/*Minor adjustment to the menu and content styling*/
+@media screen and (min-width: 500px) {
+	#masthead h1 {
+		font-size: 1.75em;
+	}
+
+	#masthead h2 {
+		font-size: 1.1em;
+		display: block;
+	}
+
+	#content {
+		line-height: 1.5;
+		font-size: 1.125em;
+	}
+
+	#dropDown {
+		justify-content: center;
+		-webkit-justify-content: center;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+
+	#dropDown li {
+		margin-left: 0.25em;
+		margin-right: 0.25em;
+	}
+}
+/*End 500px min query*/
+
+
+/*Large tablet/small desktop resolutions*/
+/*Incorporates major menu re-shuffle*/
+@media screen and (min-width: 800px) {
+
+	/*Masthead section*/
+	#jsDisabled {
+		font-size: 1em;
+	}
+
+	#masthead {
+	  text-align: center;
+	  margin: 0;
+		box-shadow: 0px 2px 5px #000;
+	}
+
+	#masthead h1 {
+		font-size: 2em;
+	}
+
+	#masthead h2 {
+		font-size: 1.1em;
+	}
+
+	h1, h2 {
+		padding: 0.5rem;
+	}
+	/*End masthead section*/
+
+	/*Nav section*/
+	#menuDrop {
+		display: none;
+	}
+
+	#menuActual {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+ 		justify-content: center;
+		-webkit-justify-content: center;
+		margin: 0.5em 5%;
+	}
+
+	#menuActual li {
+		margin: 0.5em 0.25em;
+	}
+
+	#menuActual li a {
+	  margin: 0.5em 0;
+		padding: 0.5em;
+		border-radius: 15px;
+	}
+
+	#menuActual a.selected {
+	  color: #fffffc!important;
+	  background-color: #122256;
+		box-shadow: 2px 2px 5px #000;
+		text-shadow: 2px 2px 2px #000;
+	}
+
+	#pageTurnNav {
+		padding: 0 5%;
+	}
+	/*End nav section*/
+
+	/*Content section*/
+	#content {
+		padding: 0 5%;
+		line-height: 1.5;
+	}
+
+	body {
+		font-size: 1.25em;
+	}
+	/*End content section*/
+}
+/*End 800px min query*/
+
+
+/*Proper desktop resolutions*/
+/*Minor styling altertions to space out elements a little*/
+@media screen and (min-width: 1024px) {
+	#masthead h1 {
+		font-size: 3.5em;
+	}
+
+	#masthead h2 {
+		font-size: 1.5em;
+	}
+
+	h1, h2 {
+		padding: 1rem;
+	}
+
+	#menu {
+		margin: 1em 0 1em;
+	}
+
+	#content {
+		line-height: 1.75;
+	}
+}
+/*End 1024px media q*/
+/*End responsive CSS*/
