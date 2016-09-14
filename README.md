@@ -6,6 +6,8 @@
 
 This is the repository for both the source code and editorial content. It is updated from time to time as I refine and expand it.
 
+Please note that I'm well aware of how bad the PHP is. It will be rectified in due time. For now, it works, so it'll do.
+
 ## Licence
 
 All original work is licenced under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to use this resource in any non-commercial way you see fit, as long as you acknowledge me as the original author and make your work available for others to use.
