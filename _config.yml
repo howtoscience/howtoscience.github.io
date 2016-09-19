@@ -1,0 +1,9 @@
+name: How To Science
+url: http://www.howtoscience.net
+markdown: kramdown
+description: Student guide on how to write scientific papers and reports
+
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from

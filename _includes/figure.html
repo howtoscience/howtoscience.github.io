@@ -1,0 +1,10 @@
+{% comment %}
+  For inserting the numerous figures and examples into the main text.
+  Usage: include figure.html img='FILENAME.EXT' [if there's an image] clickable='true' [if the image is to be clickable] example='EXAMPLE TEXT' [if there's text instead of an image] caption='CAPTION TEXT' [for the explanatory text]
+{% endcomment %}
+
+<div class="figure">
+  {% if include.clickable and include.img %}<a class="figure_link" href="/img/{{ include.img }}" target="_blank">{% endif %}{% if include.img %}<img src="/img/{{ include.img }}" alt="{{ include.alt }}">{% endif %}{% if include.clickable %}</a>{% endif %}
+  {% if include.example %}<p>{{ include.example }}</p>{% endif %}
+  <p class="legend">{{ include.caption }}</p>
+</div>

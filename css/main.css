@@ -27,6 +27,9 @@ table, caption, tbody, tfoot, thead, tr, th {
 }
 body {
 	line-height: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -59,7 +62,7 @@ html {
 	overflow: -moz-scrollbars-vertical;
   overflow-y: scroll!important;
 }
-/*D.A.: End 'borrowed' browser reset code*/
+/*D.A.: End stolen browser reset code*/
 
 /*Remove link underlines*/
 a:link {
@@ -214,6 +217,10 @@ MASTHEAD
 	font-size: 0.85em;
 }
 
+#jsDisabled a {
+	text-decoration: underline;
+}
+
 #mashead a {
 	padding: 0 2.5%;
 }
@@ -311,7 +318,7 @@ page links allowing easy user navigation when at the bottom of a page*/
 #pageTurnNav {
 	max-width: 940px;
 	margin: 0 auto;
-	padding: 0 2.5%;
+	padding: 0 2.5%; /*7em bottom padding to accommodate footer*/
 }
 
 #pageTurnNav ul {
@@ -347,6 +354,9 @@ always rendered on the left by default*/
 /*****************
 CONTENT
 *****************/
+#container {
+	flex-grow: 1;
+}
 
 /*Main content size/position*/
 #content {
@@ -431,11 +441,30 @@ FOOTER
 *****************/
 
 footer {
+	width: 100%;
   text-align: center;
   margin: 1rem auto 0;
-  clear: both;
+	padding-bottom: 0.5rem;
 	box-shadow: 0px -2px 5px #000;
 	text-shadow: 2px 2px 2px #000;
+}
+
+footer ul {
+	padding: 0 2.5%;
+}
+
+footer p {
+	font-size: 0.75em;
+	line-height: 1.125;
+}
+
+footer a, footer a:visited {
+	text-decoration: underline!important;
+	color: inherit!important;
+}
+
+footer img {
+	padding-top: 0.5em;
 }
 
 
@@ -517,6 +546,10 @@ Responsive CSS
 		margin-left: 0.25em;
 		margin-right: 0.25em;
 	}
+
+	footer img {
+		padding-top: 1em;
+	}
 }
 /*End 500px min query*/
 
@@ -596,6 +629,38 @@ Responsive CSS
 		font-size: 1.25em;
 	}
 	/*End content section*/
+
+	/*footer*/
+	footer {
+		margin-top: 1.5rem;
+	}
+
+	footer p, footer img {
+		padding: 0;
+	}
+
+	footer ul {
+		max-width: 940px;
+		margin: 0 auto;
+		padding: 1em 5%;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-content: center;
+		align-content: center;
+	}
+
+	footer p {
+		text-align: left;
+	}
+
+	.cc_text {
+		margin-left: 0.75em;
+	}
+
+	.cc_img {
+		margin-right: 0.75em;
+	}
+	/*End footer*/
 }
 /*End 800px min query*/
 
