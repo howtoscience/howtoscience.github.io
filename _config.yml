@@ -1,7 +1,7 @@
 name: How To Science
 url: http://www.howtoscience.net
 markdown: kramdown
-description: Student guide on how to write scientific papers and reports
+description: An easy-to-read student guide on how to write scientific papers and reports without the boring jargon.
 
 gems:
   - jekyll-sitemap
