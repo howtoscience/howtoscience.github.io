@@ -76,7 +76,7 @@
         </div>
         {% if page.navId %}
           <nav id=pageTurnNav>
-            <ul>{% comment %}Use the navArray generated during prev nav section contruction to figure out where the 'next ->' and '<- prev' buttons point {% endcomment %}
+            <ul>{% comment %}Use the navArray generated during prev nav section construction to figure out where the 'next ->' and '<- prev' buttons point {% endcomment %}
               {% assign prev = page.navId | minus: 2 %}
               {% if page.navId > 1 %}<li><a href="{{ navArray[prev] }}" class="pageTurn"><i class="fa fa-arrow-left" aria-hidden="true"></i><noscript>&#9664;</noscript> Previous</a></li>{% endif %}
               {% if page.navId < 8 %}<li class="next"><a href="{{ navArray[page.navId] }}" class="pageTurn">{% if page.navId == 1 %}Get Started! {% else %}Next {% endif %}<i class="fa fa-arrow-right" aria-hidden="true"></i><noscript>&#9654;</noscript></a></li>{% endif %}
@@ -91,6 +91,7 @@
         </ul>
       </footer>
       <script type="text/javascript">
+        //load external JS resources after page render
         function loadScriptPostRender() {
           var element = document.createElement("script");
           element.src = "http://code.jquery.com/jquery-1.11.0.min.js";
@@ -108,6 +109,15 @@
         else if (window.attachEvent)
           window.attachEvent("onload", loadScriptPostRender);
         else window.onload = loadScriptPostRender;
+      </script>
+      <script>
+        //google analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86106212-1', 'auto');
+        ga('send', 'pageview');
       </script>
   </body>
 </html>
