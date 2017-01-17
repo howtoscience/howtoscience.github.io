@@ -3,9 +3,6 @@ layout: common
 title: Introduction
 description: How to write the introduction to a scientific paper or report
 permalink: /introduction/
-redirect_from:
-  - /intro.php
-  - /intro.html
 navId: 3
 ---
 

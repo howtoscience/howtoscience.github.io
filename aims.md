@@ -3,9 +3,6 @@ layout: common
 title: Aims
 description: How to write the aims section of a scientific paper or report
 permalink: /aims/
-redirect_from:
-  - /aims.php
-  - /aims.html
 navId: 4
 ---
 

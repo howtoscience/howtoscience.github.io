@@ -3,9 +3,6 @@ layout: common
 title: Discussion
 description: How to write the discussion section of a scientific paper or report
 permalink: /discussion/
-redirect_from:
-  - /discussion.php
-  - /discussion.html
 navId: 6
 ---
 

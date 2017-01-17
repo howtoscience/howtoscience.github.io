@@ -3,9 +3,6 @@ layout: common
 title: Referencing
 description: How to write the references section of a scientific paper or report
 permalink: /referencing/
-redirect_from:
-  - /refs.php
-  - /refs.html
 navId: 8
 ---
 ### Referencing
