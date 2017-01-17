@@ -2,9 +2,6 @@
 layout: common
 title: Getting Started
 permalink: /getting-started/
-redirect_from:
-  - /getStart.php
-  - /getStart.html
 navId: 2
 ---
 

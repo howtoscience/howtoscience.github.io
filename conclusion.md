@@ -3,9 +3,6 @@ layout: common
 title: Conclusions
 description: How to write the conclusion to a scientific paper or report
 permalink: /conclusions/
-redirect_from:
-  - /conclusion.php
-  - /conclusion.html
 navId: 7
 ---
 
